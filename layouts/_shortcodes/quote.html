@@ -1,0 +1,8 @@
+{{ $text := .Get "text" }}
+{{ $author := .Get "author" }}
+<figure>
+	<blockquote>
+		<span>&OpenCurlyDoubleQuote;</span>{{ $text }}<span>&CloseCurlyDoubleQuote;</span>
+	</blockquote>
+	<figcaption class="source">&mdash; {{ $author }}</figcaption>
+</figure>
