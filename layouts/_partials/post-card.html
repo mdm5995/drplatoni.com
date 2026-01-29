@@ -1,0 +1,24 @@
+{{/* Expects: The context of a single page (the "dot")
+Usage: {{ partial "post-card.html" . }}
+*/}}
+
+{{/* get or default for thumbnail */}}
+{{ $image := resources.Get "images/default-thumbnail.jpg" }}
+{{ with .Resources.GetMatch "featured-image*" }}
+{{ $image = . }}
+{{ end }}
+
+<article class="stack">
+	<a class="stack" href="{{ .RelPermalink }}">
+		{{ with $image }}
+		{{ $thumbnail := .Resize "600x webp q80" }}
+		<img src="{{ $thumbnail.RelPermalink }}" width={{ $thumbnail.Width }} height="{{ $thumbnail.Height }}" alt="{{ $.Title }}" loading="lazy">
+		{{ end }}
+
+		<h4>{{ .Title }}</h4>
+	</a>
+	<p>{{ .Summary | plainify | truncate 200 }}</p>
+	<a class="button" href="{{ .RelPermalink }}">
+		Read More
+	</a>
+</article>

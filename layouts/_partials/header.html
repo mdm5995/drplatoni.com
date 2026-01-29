@@ -1,0 +1,40 @@
+<!-- <a href='{{ "/" | relLangURL }}'> -->
+<!-- 	<h1 class="site-title">Dr. Kathy Platoni</h1> -->
+<!-- </a> -->
+<!-- <nav> -->
+<!-- 	<a href='{{ "/" | relLangURL }}'>Home</a> -->
+<!-- 	{{ range site.Sections }} -->
+<!-- 	<a href="{{ .RelPermalink }}">{{ .Title }}</a> -->
+<!-- 	{{ end }} -->
+<!-- 	<a href='{{ "/about/" | relLangURL }}'>About</a> -->
+<!-- 	<a href='{{ "/services/" | relLangURL }}'>Services</a> -->
+<!-- </nav> -->
+<!-- {{ with resources.Get "images/homepage-banner.png" }} -->
+<!-- <img class="banner" src="{{ .Permalink }}" alt="Dr. Platoni in fatigues among fellow soldiers"> -->
+<!-- {{ end }} -->
+<!---->
+
+{{ $defaultBanner := resources.Get "images/homepage-banner.png" }}
+{{ $featuredImageParam := .Params.featured_image }}
+{{ $featuredImage := .Resources.Get $featuredImageParam }}
+
+<a href='{{ "/" | relLangURL }}'>
+	<h1 class="site-title">Dr. Kathy Platoni</h1>
+</a>
+
+<nav>
+	<a href='{{ "/" | relLangURL }}'>Home</a>
+	{{ range site.Sections }}
+	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+	{{ end }}
+	<a href='{{ "/about/" | relLangURL }}'>About</a>
+	<a href='{{ "/services/" | relLangURL }}'>Services</a>
+</nav>
+
+{{ $banner := "" }}
+{{ if not $featuredImage }}
+{{ $banner = $defaultBanner }}
+{{ else }}
+{{ $banner = $featuredImage }}
+{{ end }}
+<img class="banner" src="{{ $banner.Permalink }}" alt='{{ $.Params.featured_image_alt | default "Dr. Platoni in fatigues among fellow soldiers" }}'>

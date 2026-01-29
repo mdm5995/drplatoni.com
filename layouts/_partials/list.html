@@ -1,0 +1,13 @@
+<h1>{{ .Title }}</h1>
+
+{{ if .Pages }}
+<ul class="content-list">
+	{{ range .Pages }}
+	<li class="content-item">
+		<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+	</li>
+	{{ end }}
+</ul>
+{{ else }}
+<p>No content found.</p>
+{{ end }}
