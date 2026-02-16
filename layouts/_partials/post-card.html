@@ -8,7 +8,7 @@ Usage: {{ partial "post-card.html" . }}
 {{ $image = . }}
 {{ end }}
 
-<article class="stack">
+<article class="stack post-card">
 	<a class="stack" href="{{ .RelPermalink }}">
 		{{ with $image }}
 		{{ $thumbnail := .Resize "600x webp q80" }}
@@ -18,7 +18,7 @@ Usage: {{ partial "post-card.html" . }}
 		<h4>{{ .Title }}</h4>
 	</a>
 	<p>{{ .Summary | plainify | truncate 200 }}</p>
-	<a class="button" href="{{ .RelPermalink }}">
+	<a class="button basic" href="{{ .RelPermalink }}">
 		Read More
 	</a>
 </article>

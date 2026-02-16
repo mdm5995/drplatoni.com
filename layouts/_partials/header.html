@@ -23,12 +23,11 @@
 </a>
 
 <nav>
-	<a href='{{ "/" | relLangURL }}'>Home</a>
+	<!-- <a href='{{ "/" | relLangURL }}'>Home</a> -->
 	{{ range site.Sections }}
 	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 	{{ end }}
 	<a href='{{ "/about/" | relLangURL }}'>About</a>
-	<a href='{{ "/services/" | relLangURL }}'>Services</a>
 </nav>
 
 {{ $banner := "" }}
@@ -37,4 +36,7 @@
 {{ else }}
 {{ $banner = $featuredImage }}
 {{ end }}
-<img class="banner" src="{{ $banner.Permalink }}" alt='{{ $.Params.featured_image_alt | default "Dr. Platoni in fatigues among fellow soldiers" }}'>
+<img class="banner"
+     src="{{ $banner.Permalink }}"
+     alt='{{ $.Params.featured_image_alt | default "Dr. Platoni in fatigues among fellow soldiers" }}'
+>

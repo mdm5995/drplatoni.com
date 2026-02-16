@@ -32,7 +32,7 @@ This book is especially relevant for professionals working with veterans and act
 
 **Exciting approaches for healing war trauma**
 
-For veterans who don’t respond to conventional, office-based treatments, this book offers innovative approaches designed to inspire clinicians and veterans alike. Techniques are meant to complement traditional cognitive-behavioral protocols and help clinicians go beyond their limits. :contentReference[oaicite:3]{index=3}
+For veterans who don’t respond to conventional, office-based treatments, this book offers innovative approaches designed to inspire clinicians and veterans alike. Techniques are meant to complement traditional cognitive-behavioral protocols and help clinicians go beyond their limits.
 
 {{< quote
     text="This shining gem belongs on the desk of all who seek to heal war trauma. Confronting the complexities of the wounded soul reminds us of the need to broaden the scope of treatment strategies... A beautiful blend of theory and practice."
@@ -60,9 +60,9 @@ For veterans who don’t respond to conventional, office-based treatments, this 
 
 **Bringing You All The Way Home**
 
-*Combat Stress* is a quarterly newsletter published in February, May, August, and November. It offers news and information for service members, Veterans, and their families, with content that avoids technical jargon and is easy to understand. :contentReference[oaicite:6]{index=6}
+*Combat Stress* is a quarterly newsletter published in February, May, August, and November. It offers news and information for service members, Veterans, and their families, with content that avoids technical jargon and is easy to understand.
 
-Dr. Platoni is both **Chairwoman and Editor** of *Combat Stress*. :contentReference[oaicite:7]{index=7}
+Dr. Platoni is both **Chairwoman and Editor** of *Combat Stress*.
 
 {{< big-link
   label="Read now"

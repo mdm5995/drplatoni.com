@@ -1,13 +1,14 @@
-<h1>{{ .Title }}</h1>
-
-{{ if .Pages }}
-<ul class="content-list">
-	{{ range .Pages }}
-	<li class="content-item">
-		<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-	</li>
+<section id="latest-news" class="stack">
+	<h2>{{ .Title }}</h2>
+	{{ if .Pages }}
+	<ul class="post-list stack">
+		{{ range .Pages }}
+		<li>
+			{{ partial "post-item.html" . }}
+		</li>
+		{{ end }}
+	</ul>
+	{{ else }}
+	<p>No content found.</p>
 	{{ end }}
-</ul>
-{{ else }}
-<p>No content found.</p>
-{{ end }}
+</section>

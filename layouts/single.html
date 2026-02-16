@@ -1,35 +1,37 @@
 {{ define "main" }}
 <!-- hello single -->
-<article class="post-container stack">
-	<header class="post-header">
-		<h1 class="post-title">{{ .Title }}</h1>
-		{{ with .Params.subtitle }}
-		<p class="subtitle">{{ . }}</p>
-		{{ end }}
-
-		<div class="post-meta">
-			<time datetime='{{ .Date.Format "2006-01-02" }}'>
-				{{ .Date.Format "January 2, 2006" }}
-			</time>
-			{{ with .Params.author }}
-			<span class="post-author">by {{ . }}</span>
+<section>
+	<article class="post-container stack">
+		<header class="post-header">
+			<h1 class="post-title">{{ .Title }}</h1>
+			{{ with .Params.subtitle }}
+			<p class="subtitle">{{ . }}</p>
 			{{ end }}
-		</div>
-	</header>
 
-	<section class="post-content stack">
-		{{ .Content }}
-	</section>
+			<div class="post-meta">
+				<time datetime='{{ .Date.Format "2006-01-02" }}'>
+					{{ .Date.Format "January 2, 2006" }}
+				</time>
+				{{ with .Params.author }}
+				<span class="post-author">by {{ . }}</span>
+				{{ end }}
+			</div>
+		</header>
 
-	<footer class="post-footer">
-		tagged with:
-		{{ with .Params.tags }}
-		<ul class="post-tags">
-			{{ range . }}
-			<li><a href='{{ "tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a></li>
+		<section class="post-content stack">
+			{{ .Content }}
+		</section>
+
+		<footer class="post-footer">
+			{{ with .Params.tags }}
+			tagged with:
+			<ul class="post-tags">
+				{{ range . }}
+				<li><a href='{{ "tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a></li>
+				{{ end }}
+			</ul>
 			{{ end }}
-		</ul>
-		{{ end }}
-	</footer>
-</article>
+		</footer>
+	</article>
+</section>
 {{ end }}
