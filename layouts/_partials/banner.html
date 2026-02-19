@@ -1,0 +1,13 @@
+{{ $defaultBanner := resources.Get "images/homepage-banner.png" }}
+{{ $featuredImageParam := .Params.featured_image }}
+{{ $featuredImage := .Resources.Get $featuredImageParam }}
+
+{{ $banner := "" }}
+{{ if not $featuredImage }}
+{{ $banner = $defaultBanner }}
+{{ else }}
+{{ $banner = $featuredImage }}
+{{ end }}
+<img src="{{ $banner.Permalink }}"
+     alt='{{ $.Params.featured_image_alt | default "Dr. Platoni in fatigues among fellow soldiers" }}'
+>

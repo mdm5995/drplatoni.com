@@ -56,8 +56,6 @@ p {
 
 img {
 	max-width: 100%;
-	height: auto;
-	display: block;
 }
 
 h1,
@@ -75,7 +73,24 @@ h6 {
 	color: var(--color-primary);
 }
 
-.banner {
+/* h1 { */
+/* 	font-size: var(--s2); */
+/* } */
+/**/
+/* h2 { */
+/* 	font-size: var(--s1); */
+/* } */
+/**/
+/* h3 { */
+/* 	font-size: var(--s0); */
+/* } */
+/**/
+/* h3 { */
+/* 	font-size: var(--s-1); */
+/* } */
+/**/
+
+header+img {
 	display: block;
 	width: 100%;
 	height: max(30vh, 250px);
@@ -84,66 +99,66 @@ h6 {
 	filter: brightness(0.7);
 }
 
-.site-header {
+body>header {
+	background-color: var(--color-secondary);
+}
+
+body>header>nav {
 	font-family: var(--font-sans-serif);
 	text-transform: uppercase;
 	color: var(--color-background);
-	background-color: var(--color-secondary);
 	letter-spacing: var(--s-5);
 
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: center;
 	align-items: stretch;
+	justify-content: center;
+	margin-inline: var(--s0);
 }
 
-@media screen and (min-width: 160ch) {
-	.site-header {
+body>header>nav>div {
+	display: flex;
+	overflow-x: auto;
+}
+
+@media screen and (min-width: 126ch) {
+	body>header>nav {
 		justify-content: space-between;
 	}
 }
 
-.site-header>nav {
-	display: flex;
-	flex-flow: row;
-	list-style-type: none;
-	align-items: stretch;
-	overflow-x: auto;
-}
-
-.site-header .site-title {
+body>header h1 {
 	font-family: var(--font-sans-serif);
 	color: inherit;
-	padding-inline: var(--s0);
-	margin: var(--s0);
+	text-align: center;
 }
 
-.site-header a {
+body>header a {
 	text-decoration: none;
 	color: var(--color-background);
 	background-color: var(--color-secondary);
 }
 
-.site-header a:hover {
+body>header a:hover {
 	background-color: var(--color-background);
 	color: var(--color-secondary);
 }
 
-.site-header>nav a {
+body>header>nav a {
 	display: flex;
 	align-items: center;
 	font-size: var(--s0);
-	padding: var(--s0) var(--s1);
+	padding: var(--s0);
 }
 
-.site-footer {
+body>footer {
 	background-color: var(--color-secondary);
 	display: flex;
 	padding: var(--s1);
 	justify-content: center;
 }
 
-.site-footer * {
+body>footer * {
 	color: var(--color-background);
 	font-family: var(--font-sans-serif);
 }
@@ -176,7 +191,8 @@ main {
 hgroup {
 	display: flex;
 	flex-direction: column;
-	gap: var(--s0);
+	gap: var(--s-2);
+	font-size: var(--s1);
 }
 
 hgroup:first-child {
@@ -208,7 +224,7 @@ main>section {
 	min-inline-size: 70%;
 }
 
-.sidebar-address {
+main>aside>address {
 	display: flex;
 	flex-flow: column nowrap;
 	gap: var(--s0);

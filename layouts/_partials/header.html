@@ -14,29 +14,16 @@
 <!-- {{ end }} -->
 <!---->
 
-{{ $defaultBanner := resources.Get "images/homepage-banner.png" }}
-{{ $featuredImageParam := .Params.featured_image }}
-{{ $featuredImage := .Resources.Get $featuredImageParam }}
-
-<a href='{{ "/" | relLangURL }}'>
-	<h1 class="site-title">Dr. Kathy Platoni</h1>
-</a>
-
 <nav>
-	<!-- <a href='{{ "/" | relLangURL }}'>Home</a> -->
-	{{ range site.Sections }}
-	<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-	{{ end }}
-	<a href='{{ "/about/" | relLangURL }}'>About</a>
-</nav>
+	<a href='{{ "/" | relLangURL }}'>
+		<h1>Dr. Kathy Platoni</h1>
+	</a>
 
-{{ $banner := "" }}
-{{ if not $featuredImage }}
-{{ $banner = $defaultBanner }}
-{{ else }}
-{{ $banner = $featuredImage }}
-{{ end }}
-<img class="banner"
-     src="{{ $banner.Permalink }}"
-     alt='{{ $.Params.featured_image_alt | default "Dr. Platoni in fatigues among fellow soldiers" }}'
->
+	<!-- <a href='{{ "/" | relLangURL }}'>Home</a> -->
+	<div>
+		<a href='{{ "/about/" | relLangURL }}'>About</a>
+		{{ range site.Sections }}
+		<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+		{{ end }}
+	</div>
+</nav>
