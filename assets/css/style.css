@@ -52,10 +52,14 @@ body {
 	line-height: var(--golden-ratio);
 }
 
-p {
+article>p,
+article>ul,
+article>hr {
 	font-family: var(--font-serif);
 	max-width: var(--line-length);
+	font-size: var(--s1);
 }
+
 
 img {
 	max-width: 100%;
@@ -397,6 +401,13 @@ li>article>section {
 	align-items: flex-start;
 }
 
+hr {
+	width: var(--line-length);
+	height: 1px;
+	color: var(--color-secondary);
+}
+
+
 #post>header {
 	display: flex;
 	flex-direction: column;
@@ -413,6 +424,7 @@ main:has(#post) {
 	display: flex;
 	flex-direction: column;
 	gap: var(--s0);
+	align-items: center;
 }
 
 #post #tags {
@@ -432,6 +444,7 @@ main:has(#post) {
 #post>ul {
 	margin-inline-start: var(--s1);
 	list-style-type: disc;
+	max-width: var(--line-length);
 }
 
 #post>ul>li {
