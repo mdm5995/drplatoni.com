@@ -4,38 +4,41 @@
 
 {{ define "main" }}
 <!-- hello single -->
-<section>
-	<article class="post-container stack">
-		<header class="post-header">
-			<h1 class="post-title">{{ .Title }}</h1>
-			{{ with .Params.subtitle }}
-			<p class="subtitle">{{ . }}</p>
+<article id="post">
+	<header>
+		<h2>{{ .Title }}</h2>
+		{{ with .Params.subtitle }}
+		<p>{{ . }}</p>
+		{{ end }}
+		<div>
+			<time datetime='{{ .Date.Format "2006-01-02" }}'>
+				{{ .Date.Format "January 2, 2006" }}
+			</time>
+			{{ with .Params.author }}
+			<span>by {{ . }}</span>
 			{{ end }}
-
-			<div class="post-meta">
-				<time datetime='{{ .Date.Format "2006-01-02" }}'>
-					{{ .Date.Format "January 2, 2006" }}
-				</time>
-				{{ with .Params.author }}
-				<span class="post-author">by {{ . }}</span>
-				{{ end }}
-			</div>
-		</header>
-
-		<section class="post-content stack">
-			{{ .Content }}
-		</section>
-
-		<footer class="post-footer">
-			{{ with .Params.tags }}
-			tagged with:
-			<ul class="post-tags">
+		</div>
+		{{ with .Params.source_name }}
+		<cite>
+			<a href="{{ $.Params.source_url }}" target="_blank" rel="noopener noreferrer">{{ . }}</a>
+		</cite>
+		{{ end }}
+	</header>
+	{{ .Content }}
+	{{ with .Params.source_name }}
+	<a class="button primary" href="{{ $.Params.source_url }}" target="_blank" rel="noopener noreferrer">Read Full Article</a>
+	{{ end }}
+	<footer>
+		{{ with .Params.tags }}
+		<section id="tags">
+			<h4>tagged with:</h4>
+			<ul>
 				{{ range . }}
-				<li><a href='{{ "tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a></li>
+				<li><a class="button basic" href='{{ "tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a></li>
 				{{ end }}
 			</ul>
-			{{ end }}
-		</footer>
-	</article>
-</section>
+		</section>
+		{{ end }}
+	</footer>
+</article>
 {{ end }}

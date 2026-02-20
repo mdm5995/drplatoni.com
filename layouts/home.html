@@ -1,90 +1,106 @@
 {{ define "main" }}
 <!-- <section class="tagline"> -->
-<section id="services" class="stack">
-	<hgroup>
-		<h3>
-			Guiding Others To Heal Is A Privilege
-		</h3>
-		<p>
-			Expertise in Healing Trauma, Combat Stress and Mass Casualties
-		</p>
-	</hgroup>
+<section>
+	<section id="services" class="stack">
+		<hgroup>
+			<h2>
+				Guiding Others To Heal Is A Privilege
+			</h2>
+			<p>
+				Expertise in Healing Trauma, Combat Stress and Mass Casualties
+			</p>
+		</hgroup>
 
-	<ul class="card-container grid-4-2-1">
+		<ul class="card-container grid-4-2-1">
 
-		<li>
-			<article class="stack">
-				{{ with resources.Get "images/therapist.png" }}
-				<a class="stack" href="/therapist">
-					<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
-					{{ end }}
-					<h4>
-						Therapist
-					</h4>
-				</a>
-				<p>
-					Dr. Platoni is an expert in PTSD. Her creative approaches are forged from thousands of hours as a therapist and from that deep place of personal understanding.
-				</p>
-			</article>
-			<a class="button basic" href="/therapist">Read More</a>
-		</li>
+			<li>
+				<article>
+					{{ with resources.Get "images/therapist.png" }}
+					<a href="/therapist">
+						<header>
+							<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
+							{{ end }}
+							<h3>
+								Therapist
+							</h3>
+						</header>
+					</a>
+					<p>
+						Dr. Platoni is an expert in PTSD. Her creative approaches are forged from thousands of hours as a therapist and from that deep place of personal understanding.
+					</p>
+					<footer>
+						<a class="button basic" href="/therapist">Read More</a>
+					</footer>
+				</article>
+			</li>
 
-		<li>
-			<article class="stack">
-				{{ with resources.Get "images/trainer.jpeg" }}
-				<a class="stack" href="/trainer">
-					<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
-					{{ end }}
-					<h4>
-						Trainer
-					</h4>
-				</a>
-				<p>
-					When Police and Military need instruction on managing the aftermath of mass causalities and trauma, they turn to Dr. Platoni for her expert leadership and guidance.
-				</p>
-			</article>
-			<a class="button basic" href="/trainer">Read More</a>
-		</li>
+			<li>
+				<article>
+					{{ with resources.Get "images/trainer.jpeg" }}
+					<a href="/trainer">
+						<header>
+							<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
+							{{ end }}
+							<h3>
+								Trainer
+							</h3>
+						</header>
+					</a>
+					<p>
+						When Police and Military need instruction on managing the aftermath of mass causalities and trauma, they turn to Dr. Platoni for her expert leadership and guidance.
+					</p>
+					<footer>
+						<a class="button basic" href="/trainer">Read More</a>
+					</footer>
+				</article>
+			</li>
 
-		<li>
-			<article class="stack">
-				{{ with resources.Get "images/author.png" }}
-				<a class="stack" href="/books">
-					<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
-					{{ end }}
-					<h4>
-						Author
-					</h4>
-				</a>
-				<p>
-					Drs. Scurfield and Platoni literally “wrote the books” on war trauma. Their writings of war trauma, from both military and civilian sectors, address the specific needs of warrior communities, as well as wider issues such as battle-mind, reintegration and homecoming, survivor guilt, and military and Veteran suicides.
-				</p>
-			</article>
-			<a class="button basic" href="/books">Read More</a>
-		</li>
+			<li>
+				<article>
+					{{ with resources.Get "images/author.png" }}
+					<a href="/books">
+						<header>
+							<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
+							{{ end }}
+							<h3>
+								Author
+							</h3>
+						</header>
+					</a>
+					<p>
+						Drs. Scurfield and Platoni literally “wrote the books” on war trauma. Their writings of war trauma, from both military and civilian sectors, address the specific needs of warrior communities, as well as wider issues such as battle-mind, reintegration and homecoming, survivor guilt, and military and Veteran suicides.
+					</p>
+					<footer>
+						<a class="button basic" href="/books">Read More</a>
+					</footer>
+				</article>
+			</li>
 
-		<li>
-			<article class="stack">
-				{{ with resources.Get "images/speaker.jpg" }}
-				<a class="stack" href="/speaker">
-					<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
-					{{ end }}
-					<h4>
-						Speaker
-					</h4>
-				</a>
-				<p>
-					Dr. Platoni is a much sought-after speaker who travels throughout the country to share her experiences concerning the psychological impact and moral injuries of war, alternative approaches to the treatment of PTSD. As a survivor of the November 2009 Fort Hood Massacre, she also lectures widely on survival of mass shootings.
-				</p>
-			</article>
-			<a class="button basic" href="/speaker">Read More</a>
-		</li>
-	</ul>
+			<li>
+				<article>
+					{{ with resources.Get "images/speaker.jpg" }}
+					<a href="/speaker">
+						<header>
+							<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
+							{{ end }}
+							<h3>
+								Speaker
+							</h3>
+						</header>
+					</a>
+					<p>
+						Dr. Platoni is a much sought-after speaker who travels throughout the country to share her experiences concerning the psychological impact and moral injuries of war, alternative approaches to the treatment of PTSD. As a survivor of the November 2009 Fort Hood Massacre, she also lectures widely on survival of mass shootings.
+					</p>
+					<footer>
+						<a class="button basic" href="/speaker">Read More</a>
+					</footer>
+				</article>
+			</li>
+		</ul>
+	</section>
 
-	<section id="latest-news" class="stack">
-
+	<section id="featured" class="stack">
 		<h2>Latest News</h2>
-
 		<ul class="card-container grid-3-1">
 			{{ range first 3 site.RegularPages }}
 			<li>
@@ -92,6 +108,9 @@
 			</li>
 			{{ end }}
 		</ul>
+	</section>
+
+	<section id="news">
 		<ul class="post-list stack">
 			{{ range after 3 site.RegularPages }}
 			<li>

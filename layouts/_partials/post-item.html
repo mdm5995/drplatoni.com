@@ -8,19 +8,23 @@ Usage: {{ partial "post-card.html" . }}
 {{ $image = . }}
 {{ end }}
 
-<article class="post-item row">
+<article>
 	{{ with $image }}
 	{{ $thumbnail := .Resize "400x webp q80" }}
 	<img src="{{ $thumbnail.RelPermalink }}" alt="{{ $.Title }}" loading="lazy">
 	{{ end }}
 
-	<div class="post-info stack">
+	<section>
 		<a href="{{ .RelPermalink }}">
-			<h4>{{ .Title }}</h4>
+			<header>
+				<h3>{{ .Title }}</h3>
+			</header>
 		</a>
 		<p>{{ .Summary | plainify | truncate 400 }}</p>
-		<a class="button basic" href="{{ .RelPermalink }}">
-			Read More
-		</a>
-	</div>
+		<footer>
+			<a class="button basic" href="{{ .RelPermalink }}">
+				Read More
+			</a>
+		</footer>
+	</section>
 </article>

@@ -4,19 +4,19 @@
 		{{ partial "head.html" . }}
 	</head>
 	<body>
-		<header class="site-header">
+		<header>
 			{{ partial "header.html" . }}
 		</header>
 		{{ block "banner" . }}
 		{{ partial "banner.html" . }}
 		{{ end }}
-		<main class="with-sidebar">
+		<main>
 			{{ block "main" . }}{{ end }}
 			{{ block "sidebar" . }}
 			{{ partial "sidebar.html" }}
 			{{ end }}
 		</main>
-		<footer class="site-footer">
+		<footer>
 			{{ partial "footer.html" . }}
 		</footer>
 		{{ partial "scripts.html" .}}
