@@ -52,9 +52,9 @@ body {
 	line-height: var(--golden-ratio);
 }
 
-article>p,
-article>ul,
-article>hr {
+#post>p,
+#post>ul,
+#post>hr {
 	font-family: var(--font-serif);
 	max-width: var(--line-length);
 	font-size: var(--s1);
@@ -204,10 +204,10 @@ main {
 
 hgroup {
 	display: flex;
-	margin-block: var(--s0);
 	flex-direction: column;
 	align-items: center;
 	line-height: 1;
+	gap: var(--s0);
 }
 
 hgroup:first-child {
@@ -220,7 +220,7 @@ hgroup p {
 	font-style: normal;
 	font-weight: bold;
 	color: var(--color-accent);
-	font-size: var(--s2);
+	font-size: var(--s1);
 }
 
 main {
@@ -233,10 +233,13 @@ main {
 main>aside {
 	flex-grow: 1;
 	flex-basis: 32ch;
+	display: flex;
+	flex-flow: column nowrap;
+	gap: var(--s0);
 }
 
 main>aside h2 {
-	font-size: var(--s0);
+	font-size: var(--s1);
 }
 
 main>section,
@@ -326,6 +329,7 @@ section article header>* {
 	font-weight: 500;
 	letter-spacing: var(--s-5);
 	text-decoration: underline;
+	text-decoration-thickness: 1px;
 }
 
 section article header:hover>* {
