@@ -1,7 +1,9 @@
-<section id="latest-news" class="stack">
-	<h2>{{ .Title }}</h2>
+<section>
+	<header>
+		<h2>{{ .Title }}</h2>
+	</header>
 	{{ if .Pages }}
-	<ul class="post-list stack">
+	<ul>
 		{{ range .Pages }}
 		<li>
 			{{ partial "post-item.html" . }}

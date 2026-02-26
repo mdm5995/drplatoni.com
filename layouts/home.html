@@ -99,19 +99,43 @@
 		</ul>
 	</section>
 
-	<section id="featured" class="stack">
-		<h2>Latest News</h2>
+	<!-- Featured Tags -->
+	<section id="featured-tags">
 		<ul class="card-container grid-3-1">
-			{{ range first 3 site.RegularPages }}
+			{{ range site.Data.featured_tags }}
+			{{ $item := . }}
 			<li>
-				{{ partial "post-card.html" . }}
+				<article class="stack">
+					<a href="/tags/{{ urlize $item.tag }}">
+						{{ with resources.Get $item.thumbnail }}
+						<img src="{{ .Permalink }}" alt="{{ $item.tag }}">
+						{{ else }}
+						{{ with resources.Get "images/default-thumbnail.jpg" }}
+						<img src="{{ .Permalink }}" alt="{{ $item.tag }}">
+						{{ end }}
+						{{ end }}
+						<header>
+							<h3>{{ $item.tag | humanize | title }}</h3>
+						</header>
+					</a>
+					<p>{{ $item.blurb }}</p>
+					<footer>
+						<a class="button basic" href="/tags/{{ urlize $item.tag }}">View All</a>
+					</footer>
+				</article>
 			</li>
 			{{ end }}
 		</ul>
 	</section>
 
-	<section id="news">
-		<ul class="post-list stack">
+	<section id="news" class="stack">
+		<h2>Latest News</h2>
+		<ul>
+			{{ range first 3 site.RegularPages }}
+			<li>
+				{{ partial "post-item.html" . }}
+			</li>
+			{{ end }}
 			{{ range after 3 site.RegularPages }}
 			<li>
 				{{ partial "post-item.html" . }}

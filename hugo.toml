@@ -6,50 +6,7 @@ preserveTaxonomyNames = true
 [pagination]
   pagerSize = 5
 
-[outputs]
-  home = ["HTML", "RSS"]
-
 [params]
   SEOTitle = "Dr. Kathy Platoni | Clinical Psychologist, Trauma & PTSD Expert"
   description = "Dr. Kathy Platoni, Psy.D., DAAPM, FAIS – Expert in Healing Trauma, Combat Stress, and Mass Casualties. Author, Speaker, Trainer, and Clinical Psychologist based in Centerville, Ohio."
   keyword = "Dr. Kathy Platoni, Trauma, PTSD, Combat Stress, Clinical Psychologist, Ohio Veterans, Speaker, Trainer, Author"
-
-  upstreamAttribution = true
-
-  friends = false
-  bookmarks = false
-  about_me = true
-
-  latest_posts = true
-  latest_posts_count = 5
-
-  [params.social]
-  email    = "drRunt@woh.rr.com"
-  facebook = "https://www.facebook.com/Dr-Kathy-Platoni-1371327786262164/"
-  linkedin = "https://www.linkedin.com/in/yourlinkedinid"
-
-[markup]
-  [markup.tableOfContents]
-    endLevel = 2
-    startLevel = 1
-  [markup.highlight]
-    style = "dracula"
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-    [markup.goldmark.extensions]
-      [markup.goldmark.extensions.passthrough]
-        enable = true
-        [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)']]
-
-[mediaTypes]
-  [mediaTypes.'font/woff']
-    suffixes = ['woff']
-  [mediaTypes.'font/woff2']
-    suffixes = ['woff2']
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'

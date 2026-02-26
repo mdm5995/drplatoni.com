@@ -1,25 +1,8 @@
-<!-- <a href='{{ "/" | relLangURL }}'> -->
-<!-- 	<h1 class="site-title">Dr. Kathy Platoni</h1> -->
-<!-- </a> -->
-<!-- <nav> -->
-<!-- 	<a href='{{ "/" | relLangURL }}'>Home</a> -->
-<!-- 	{{ range site.Sections }} -->
-<!-- 	<a href="{{ .RelPermalink }}">{{ .Title }}</a> -->
-<!-- 	{{ end }} -->
-<!-- 	<a href='{{ "/about/" | relLangURL }}'>About</a> -->
-<!-- 	<a href='{{ "/services/" | relLangURL }}'>Services</a> -->
-<!-- </nav> -->
-<!-- {{ with resources.Get "images/homepage-banner.png" }} -->
-<!-- <img class="banner" src="{{ .Permalink }}" alt="Dr. Platoni in fatigues among fellow soldiers"> -->
-<!-- {{ end }} -->
-<!---->
-
 <nav>
 	<a href='{{ "/" | relLangURL }}'>
 		<h1>Dr. Kathy Platoni</h1>
 	</a>
 
-	<!-- <a href='{{ "/" | relLangURL }}'>Home</a> -->
 	<div>
 		<a href='{{ "/about/" | relLangURL }}'>About</a>
 		{{ range site.Sections }}
