@@ -3,8 +3,6 @@ title: "Books by Dr. Kathy Platoni"
 description: "An overview of publications and work by Dr. Kathy Platoni on war trauma and healing."
 ---
 
-# Dr. Kathy Platoni — Author
-
 ## War Trauma and Its Wake: *Expanding the Circle of Healing*
 
 **Treating trauma survivors**
@@ -21,7 +19,7 @@ This book is especially relevant for professionals working with veterans and act
     author="Capt. Robert Koffman, MD, MPH, Navy Psychiatrist (OIF/OEF)"
  >}}
 
-{{< big-link
+{{< button
   label="BUY THE BOOK"
   href="http://www.amazon.com/War-Trauma-Its-Wake-Psychosocial-ebook/dp/B009E35GPI/ref=sr_1_1?s=books&ie=UTF8&qid=1393111249&sr=1-1&keywords=war+trauma+and+its+wake"
 >}}
@@ -39,12 +37,12 @@ For veterans who don’t respond to conventional, office-based treatments, this 
     author="Glenn R. Schiraldi, PhD, Lt. Col. (USAR, Ret.)"
  >}}
 
-{{< big-link
+{{< button
   label="Read"
   href="#"
 >}}
 
-{{< big-link
+{{< button
   label="Learn more"
   href="#"
 >}}
@@ -64,7 +62,7 @@ For veterans who don’t respond to conventional, office-based treatments, this 
 
 Dr. Platoni is both **Chairwoman and Editor** of *Combat Stress*.
 
-{{< big-link
+{{< button
   label="Read now"
   href="#"
 >}}
@@ -78,7 +76,7 @@ Dr. Kathy Platoni, Psy.D., DAAPM, FAIS
 Centerville, Ohio 45458-2362  
 Phone: 937-321-4020  
 
-{{< big-link
+{{< button
   label="Email Dr. Platoni"
   href="#"
 >}}

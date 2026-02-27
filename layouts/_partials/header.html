@@ -8,5 +8,11 @@
 		{{ range site.Sections }}
 		<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 		{{ end }}
+		{{ range site.Data.featured_tags }}
+		{{ $item := . }}
+		<a href="/tags/{{ urlize $item.tag }}">
+			{{ $item.tag | humanize | title }}
+		</a>
+		{{ end }}
 	</div>
 </nav>

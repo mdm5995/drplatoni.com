@@ -6,13 +6,13 @@ draft: false
 summary: "Dr. Kathy Platoni was inducted into the Ohio Veterans Hall of Fame in 2019, recognized for her continued service to veterans, first responders, and warrior communities."
 featured_image: ""
 categories: ["awards", "recognition"]
-tags: ["ohio veterans hall of fame", "war trauma", "veterans", "first responders", "military", "ptsd"]
+tags: ["awards", "ohio veterans hall of fame", "war trauma", "veterans", "first responders", "military", "ptsd"]
 link: "https://www.drplatoni.com/event-types"
 ---
 
 ## Dr. Kathy Platoni Inducted into Ohio Veterans Hall of Fame
 
-{{< youtube W-Xkl-nPsO8 >}}
+{{< youtube id="W-Xkl-nPsO8" class="embed-video">}}
 
 Drs. Scurfield and Platoni literally "wrote the books" on war trauma. Their writings and those of multiple contributing experts in the field of war trauma, from both military and civilian sectors, address the specific needs of warrior communities, as well as wider issues such as battle-mind, reintegration and homecoming, survivor guilt, and military and Veteran suicides.
 

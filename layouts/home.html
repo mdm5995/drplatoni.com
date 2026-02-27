@@ -1,7 +1,8 @@
 {{ define "main" }}
 <!-- <section class="tagline"> -->
 <section>
-	<section id="services" class="stack">
+	<section id="services">
+		<!-- <section id="featured-pages"> -->
 		<hgroup>
 			<h2>
 				Guiding Others To Heal Is A Privilege
@@ -11,91 +12,16 @@
 			</p>
 		</hgroup>
 
+		<!-- Featured Pages -->
 		<ul class="card-container grid-4-2-1">
-
+			{{ range site.Data.featured_pages }}
+			{{ $item := . }}
+			{{ with site.GetPage $item.path }}
 			<li>
-				<article>
-					{{ with resources.Get "images/therapist.png" }}
-					<a href="/therapist">
-						<header>
-							<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
-							{{ end }}
-							<h3>
-								Therapist
-							</h3>
-						</header>
-					</a>
-					<p>
-						Dr. Platoni is an expert in PTSD. Her creative approaches are forged from thousands of hours as a therapist and from that deep place of personal understanding.
-					</p>
-					<footer>
-						<a class="button basic" href="/therapist">Read More</a>
-					</footer>
-				</article>
+				{{ partial "post-item.html" . }}
 			</li>
-
-			<li>
-				<article>
-					{{ with resources.Get "images/trainer.jpeg" }}
-					<a href="/trainer">
-						<header>
-							<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
-							{{ end }}
-							<h3>
-								Trainer
-							</h3>
-						</header>
-					</a>
-					<p>
-						When Police and Military need instruction on managing the aftermath of mass causalities and trauma, they turn to Dr. Platoni for her expert leadership and guidance.
-					</p>
-					<footer>
-						<a class="button basic" href="/trainer">Read More</a>
-					</footer>
-				</article>
-			</li>
-
-			<li>
-				<article>
-					{{ with resources.Get "images/author.png" }}
-					<a href="/books">
-						<header>
-							<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
-							{{ end }}
-							<h3>
-								Author
-							</h3>
-						</header>
-					</a>
-					<p>
-						Drs. Scurfield and Platoni literally “wrote the books” on war trauma. Their writings of war trauma, from both military and civilian sectors, address the specific needs of warrior communities, as well as wider issues such as battle-mind, reintegration and homecoming, survivor guilt, and military and Veteran suicides.
-					</p>
-					<footer>
-						<a class="button basic" href="/books">Read More</a>
-					</footer>
-				</article>
-			</li>
-
-			<li>
-				<article>
-					{{ with resources.Get "images/speaker.jpg" }}
-					<a href="/speaker">
-						<header>
-							<img class="" src="{{ .Permalink }}" alt="Dr. Platoni smiles in dress uniform">
-							{{ end }}
-							<h3>
-								Speaker
-							</h3>
-						</header>
-					</a>
-					<p>
-						Dr. Platoni is a much sought-after speaker who travels throughout the country to share her experiences concerning the psychological impact and moral injuries of war, alternative approaches to the treatment of PTSD. As a survivor of the November 2009 Fort Hood Massacre, she also lectures widely on survival of mass shootings.
-					</p>
-					<footer>
-						<a class="button basic" href="/speaker">Read More</a>
-					</footer>
-				</article>
-			</li>
+			{{ end }}
+			{{ end }}
 		</ul>
 	</section>
 
@@ -106,14 +32,14 @@
 			{{ $item := . }}
 			<li>
 				<article class="stack">
+					{{ with resources.Get $item.thumbnail }}
+					<img src="{{ .Permalink }}" alt="{{ $item.tag }}">
+					{{ else }}
+					{{ with resources.Get "images/default-thumbnail.jpg" }}
+					<img src="{{ .Permalink }}" alt="{{ $item.tag }}">
+					{{ end }}
+					{{ end }}
 					<a href="/tags/{{ urlize $item.tag }}">
-						{{ with resources.Get $item.thumbnail }}
-						<img src="{{ .Permalink }}" alt="{{ $item.tag }}">
-						{{ else }}
-						{{ with resources.Get "images/default-thumbnail.jpg" }}
-						<img src="{{ .Permalink }}" alt="{{ $item.tag }}">
-						{{ end }}
-						{{ end }}
 						<header>
 							<h3>{{ $item.tag | humanize | title }}</h3>
 						</header>
@@ -131,12 +57,12 @@
 	<section id="news" class="stack">
 		<h2>Latest News</h2>
 		<ul>
-			{{ range first 3 site.RegularPages }}
+			{{ range where site.RegularPages "Section" "in" (slice "news" "events" "books") }}
 			<li>
 				{{ partial "post-item.html" . }}
 			</li>
 			{{ end }}
-			{{ range after 3 site.RegularPages }}
+			{{ range where site.RegularPages "Section" "in" (slice "news" "events" "books") }}
 			<li>
 				{{ partial "post-item.html" . }}
 			</li>

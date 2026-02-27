@@ -4,8 +4,10 @@ Usage: {{ partial "post-card.html" . }}
 
 {{/* get or default for thumbnail */}}
 {{ $image := resources.Get "images/default-thumbnail.jpg" }}
-{{ with .Resources.GetMatch "featured-image*" }}
+{{ with index .Params "featured-image" }}
+{{ with resources.Get . }}
 {{ $image = . }}
+{{ end }}
 {{ end }}
 
 <article>

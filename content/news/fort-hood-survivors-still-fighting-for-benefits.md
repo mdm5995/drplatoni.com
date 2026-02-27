@@ -9,7 +9,7 @@ categories: ["military", "advocacy"]
 tags: ["fort hood", "ptsd", "military benefits", "veterans", "terrorism", "nidal hasan", "purple heart", "domestic terrorism"]
 ---
 
-{{< youtube lkO_4KzRqF0 >}}
+{{< youtube id="lkO_4KzRqF0" class="embed-video">}}
 
 ## Fort Hood Massacre
 
@@ -17,7 +17,7 @@ tags: ["fort hood", "ptsd", "military benefits", "veterans", "terrorism", "nidal
 
 ## Judicial Watch Defends "The Forgotten Soldier"
 
-{{< youtube -R5rYRB9c00 >}}
+{{< youtube id="-R5rYRB9c00" class="embed-video">}}
 
 This is the first installment, we hope, of a full exposé and a much larger story — the real truths behind the Fort Hood Massacre.
 
