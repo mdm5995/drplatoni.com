@@ -15,13 +15,9 @@
 			{{ $pdf := .Resources.GetMatch "*.pdf" }}
 
 			<li>
-				{{ with $pdf }}
-				<a class="button basic" href="{{ $pdf.RelPermalink }}">
-					{{ end }}
-					<img alt='{{ default "no alt" (.Path | humanize) }}' src="{{ $thumb.RelPermalink }}">
-					{{ with $pdf }}
-				</a>
-				{{ end }}
+				{{ if $pdf }}<a href="{{ $pdf.RelPermalink }}">{{ end }}
+					<img alt='{{ printf "%s Cover" (.Path | humanize) }}' src="{{ $thumb.RelPermalink }}">
+					{{ if $pdf }}</a>{{ end }}
 			</li>
 			{{ end }}
 		</ul>
