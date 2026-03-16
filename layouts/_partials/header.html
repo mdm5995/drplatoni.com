@@ -4,15 +4,8 @@
 	</a>
 
 	<div>
-		<a href='{{ "/about/" | relLangURL }}'>About</a>
-		{{ range site.Sections }}
-		<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-		{{ end }}
-		{{ range site.Data.featured_tags }}
-		{{ $item := . }}
-		<a href="/tags/{{ urlize $item.tag }}">
-			{{ $item.tag | humanize | title }}
-		</a>
+		{{ range .Site.Menus.main }}
+		<a href="{{ .URL }}">{{ .Name }}</a>
 		{{ end }}
 	</div>
 </nav>

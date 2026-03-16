@@ -10,3 +10,46 @@ preserveTaxonomyNames = true
   SEOTitle = "Dr. Kathy Platoni | Clinical Psychologist, Trauma & PTSD Expert"
   description = "Dr. Kathy Platoni, Psy.D., DAAPM, FAIS – Expert in Healing Trauma, Combat Stress, and Mass Casualties. Author, Speaker, Trainer, and Clinical Psychologist based in Centerville, Ohio."
   keyword = "Dr. Kathy Platoni, Trauma, PTSD, Combat Stress, Clinical Psychologist, Ohio Veterans, Speaker, Trainer, Author"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "news"
+    name = "News"
+    url = "/news/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "events"
+    name = "Events"
+    url = "/events/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "books"
+    name = "Author"
+    url = "/books/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "combat-stress-magazine"
+    name = "Combat Stress Magazine"
+    url = "/tags/combat-stress-magazine"
+    weight = 6
+
+  [[menu.main]]
+    identifier = "fort-hood"
+    name = "Fort Hood"
+    url = "/tags/fort-hood"
+    weight = 7
+
+  [[menu.main]]
+    identifier = "awards"
+    name = "Awards"
+    url = "/tags/awards"
+    weight = 8

@@ -13,10 +13,9 @@
 		</hgroup>
 
 		<!-- Featured Pages -->
-		<ul class="card-container grid-4-2-1">
+		<ul class="grid-4-2-1">
 			{{ range site.Data.featured_pages }}
-			{{ $item := . }}
-			{{ with site.GetPage $item.path }}
+			{{ with site.GetPage .path }}
 			<li>
 				{{ partial "post-item.html" . }}
 			</li>
@@ -27,26 +26,23 @@
 
 	<!-- Featured Tags -->
 	<section id="featured-tags">
-		<ul class="card-container grid-3-1">
+		<ul class="grid-3-1">
+			{{ $default_thumb := resources.Get "images/default-thumbnail.jpg" }}
 			{{ range site.Data.featured_tags }}
-			{{ $item := . }}
+			
+			{{ $thumbnail := default $default_thumb (resources.Get .thumbnail) }}
+
 			<li>
-				<article class="stack">
-					{{ with resources.Get $item.thumbnail }}
-					<img src="{{ .Permalink }}" alt="{{ $item.tag }}">
-					{{ else }}
-					{{ with resources.Get "images/default-thumbnail.jpg" }}
-					<img src="{{ .Permalink }}" alt="{{ $item.tag }}">
-					{{ end }}
-					{{ end }}
-					<a href="/tags/{{ urlize $item.tag }}">
+				<article>
+					<img src="{{ $thumbnail.RelPermalink }}" alt="{{ .tag }}">
+					<a href="{{ .RelPermalink }}">
 						<header>
-							<h3>{{ $item.tag | humanize | title }}</h3>
+							<h3>{{ .tag | humanize | title }}</h3>
 						</header>
 					</a>
-					<p>{{ $item.blurb }}</p>
+					<p>{{ .blurb }}</p>
 					<footer>
-						<a class="button basic" href="/tags/{{ urlize $item.tag }}">View All</a>
+						<a class="button basic" href="{{ .RelPermalink }}">View All</a>
 					</footer>
 				</article>
 			</li>
@@ -54,7 +50,7 @@
 		</ul>
 	</section>
 
-	<section id="news" class="stack">
+	<section id="news">
 		<h2>Latest News</h2>
 		<ul>
 			{{ range where site.RegularPages "Section" "in" (slice "news" "events" "books") }}

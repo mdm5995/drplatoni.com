@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article>
+	<header>
+		<h2>Combat Stress Magazine</h2>
+	</header>
+	<p>Harnessing Post-Traumatic Stress for Service Members, Veterans, and First Responders, Combat Stress Magazine is written with our military personnel, Veterans, first responders, their families, and all breeds of mental health clinicians in mind.  We want our readers to seek emotional wellbeing in their lives by familiarizing themselves with the countless ways in which exposure to stressors stemming from any number of battlefields can be managed.</p>
+	<p>
+		Military service and first responder service, whether police officer, firefighter, paramedic, EMT, or dispatcher expose all concerned to challenges and traumatic events that few will ever understand or appreciate. They do what they do so others will never have to. The American Institute of Stress is dedicated to helping you, our heroes, your families, and clinicians cope with the demands of the front lines of trauma and tragedy and to find the means to heal body, mind and spirit associated with such noble sacrifices.
+	</p>
+	<a class="button primary" href="">Subscribe Now</a>
+	<div>
+		<ul class="grid-3-1">
+			{{ range .Pages }}
+			{{ $thumb := default (resources.Get "images/default-thumbnail.jpg") (.Resources.GetMatch "*.webp") }}
+			{{ $pdf := .Resources.GetMatch "*.pdf" }}
+
+			<li>
+				{{ with $pdf }}
+				<a class="button basic" href="{{ $pdf.RelPermalink }}">
+					{{ end }}
+					<img alt='{{ default "no alt" (.Path | humanize) }}' src="{{ $thumb.RelPermalink }}">
+					{{ with $pdf }}
+				</a>
+				{{ end }}
+			</li>
+			{{ end }}
+		</ul>
+	</div>
+</article>
+{{ end }}
