@@ -1,11 +1,14 @@
-- tag: combat stress magazine
+- title: combat stress magazine
+  type: section
   thumbnail: images/combat-stress-magazine-thumbnail.jpg
   blurb: Read about this huge magazine thing i have
 
-- tag: fort hood
+- title: fort hood
+  type: tag
   thumbnail: images/fort-hood-thumbnail.jpg
   blurb: Read more about my decades of work to classify this massacre as terrorism for the survivors and their families
 
-- tag: awards
+- title: awards
+  type: tag
   thumbnail: images/awards-thumbnail.gif
   blurb: Read more about all the awards I've received

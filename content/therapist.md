@@ -2,11 +2,11 @@
 title: "Therapist"
 subtitle: "Kathy Platoni, Psy.D., DAAPM, FAIS — COL (RET), US Army | COL (Ohio Military Reserve), SDF"
 date: "2026-01-29"
-featured-image: "images/therapist.png"
+featured_image: "images/therapist.png"
 draft: false
 summary: "Dr. Platoni is an expert in PTSD. Her creative approaches are forged from thousands of hours as a therapist and from that deep place of personal understanding."
 categories: ["services"]
-tags: ["ptsd", "clinical-psychology", "veterans", "military", "hypnotherapy", "chronic-pain", "trauma"]
+tags: ["ptsd", "clinical psychology", "veterans", "military", "hypnotherapy", "chronic pain", "trauma"]
 ---
 
 Dr. Kathy Platoni has been a practicing clinical psychologist for more than 38 years. She specializes in the treatment of PTSD, behavioral medicine and the treatment of chronic pain and chronic, debilitating, and terminal illnesses.
@@ -62,32 +62,3 @@ As a nationally renowned expert in the treatment of Post-Traumatic Stress Disord
 For her professional contributions to the field of psychology and decades of humanitarian service, Dr. Platoni was awarded a lifetime achievement award by her alma mater, Hobart and William Smith Colleges, in 2008 and was selected for the very prestigious Dayton’s Ten Top Women Award for the Class of 2012. She was awarded the Legacy Award for community service and volunteerism in the Southwest Ohio area in April of 2013. She was awarded the Legion of Merit for exceptionally meritorious service by the United States Army on 19 July 2014. Dr. Platoni was the recipient of the 2016 IVAT Returning Veterans Resiliency in Response to Trauma Award. This award is given by the Institute on Violence, Abuse and Trauma (IVAT) to a veteran who has experienced specific trauma in war and whose efforts and advocacy have had a notably restorative impact on a traumatized population.
 
 On 14 March 2015, COL Platoni was sworn in as a member of the 4th Civil Support and Sustainment Brigade, Ohio Military Reserve; back in uniform for her 39th year, this time as Chief Psychologist for State Defense Forces.
-
----
-
-## Publications & Media
-
-She has published in professional and lay journals on topics relating to Gulf War Syndrome, the psychological aftermath of 9/11, and professional/medical ethics. Two landmark books co-written and edited with Dr. Raymond Scurfield were published in 2012:
-
-- *Expanding the Circle of Healing: Trauma in Its Wake*
-- *Healing War Trauma: A Handbook of Creative Approaches*
-
-Dr. Platoni has been featured in Fox News, CNN, USA Today, Newsweek, US News and World Report, AP News, The Guardian, Huffington Post, Washington Post, NPR Radio, Stars and Stripes, the Wall Street Journal, TIME Magazine, and The National Psychologist.
-
----
-
-## Awards & Honors
-
-- Lifetime Achievement Award, Hobart and William Smith Colleges (2008)
-- Dayton's Ten Top Women Award, Class of 2012
-- Legacy Award for Community Service, Southwest Ohio (2013)
-- Diplomate, American Academy of Pain Management
-- Fellow, American Institute of Stress
-- Legion of Merit, United States Army (July 19, 2014)
-- 2016 IVAT Returning Veterans Resiliency in Response to Trauma Award
-
----
-
-## Professional Memberships
-
-American Psychological Association, Ohio Psychological Association, American Society of Clinical Hypnosis, Society of Clinical and Experimental Hypnosis, Association of Military Surgeons of the United States, Dayton Area Psychological Association, International Critical Incident Stress Foundation. Editor, *Combat Stress E-Magazine*.

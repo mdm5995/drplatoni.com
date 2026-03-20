@@ -1,8 +1,6 @@
 {{ define "main" }}
-<!-- <section class="tagline"> -->
 <section>
 	<section id="services">
-		<!-- <section id="featured-pages"> -->
 		<hgroup>
 			<h2>
 				Guiding Others To Heal Is A Privilege
@@ -27,25 +25,16 @@
 	<!-- Featured Tags -->
 	<section id="featured-tags">
 		<ul class="grid-3-1">
-			{{ $default_thumb := resources.Get "images/default-thumbnail.jpg" }}
-			{{ range site.Data.featured_tags }}
+			{{ with site.GetPage "/combat-stress-magazine" }}
+			<li>{{ partial "post-item.html" . }}</li>
+			{{ end }}
 			
-			{{ $thumbnail := default $default_thumb (resources.Get .thumbnail) }}
-
-			<li>
-				<article>
-					<img src="{{ $thumbnail.RelPermalink }}" alt="{{ .tag }}">
-					<a href="{{ .RelPermalink }}">
-						<header>
-							<h3>{{ .tag | humanize | title }}</h3>
-						</header>
-					</a>
-					<p>{{ .blurb }}</p>
-					<footer>
-						<a class="button basic" href="{{ .RelPermalink }}">View All</a>
-					</footer>
-				</article>
-			</li>
+			{{ with index site.Taxonomies.tags "fort hood" }}
+			<li>{{ partial "post-item.html" .Page }}</li>
+			{{ end }}
+			
+			{{ with index site.Taxonomies.tags "awards" }}
+			<li>{{ partial "post-item.html" .Page }}</li>
 			{{ end }}
 		</ul>
 	</section>
@@ -58,9 +47,12 @@
 				{{ partial "post-item.html" . }}
 			</li>
 			{{ end }}
+			{{/* TODO: REMOVE DUPES */}}
 			{{ range where site.RegularPages "Section" "in" (slice "news" "events" "books") }}
+			{{ $page := . }}
+			{{ $dupeTitle := printf "[DUPE] %s" .Title }}
 			<li>
-				{{ partial "post-item.html" . }}
+				{{ partial "post-item.html" (dict "Title" $dupeTitle "RelPermalink" $page.RelPermalink "Summary" $page.Summary "Params" $page.Params) }}
 			</li>
 			{{ end }}
 		</ul>

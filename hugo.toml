@@ -39,7 +39,7 @@ preserveTaxonomyNames = true
   [[menu.main]]
     identifier = "combat-stress-magazine"
     name = "Combat Stress Magazine"
-    url = "/combat-stress"
+    url = "/combat-stress-magazine"
     weight = 6
 
   [[menu.main]]

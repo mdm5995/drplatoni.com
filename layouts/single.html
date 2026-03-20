@@ -3,17 +3,18 @@
 {{ end }}
 
 {{ define "main" }}
-<!-- hello single -->
 <article id="post">
 	<header>
 		<h2>{{ .Title }}</h2>
 		{{ with .Params.subtitle }}
-		<h3>{{ . }}</h3>
+		<h4>{{ . }}</h4>
 		{{ end }}
 		<div>
-			<time datetime='{{ .Date.Format "2006-01-02" }}'>
-				{{ .Date.Format "January 2, 2006" }}
+			{{ with .Params.date }}
+			<time datetime='{{ .Format "2006-01-02" }}'>
+				{{ .Format "January 2, 2006" }}
 			</time>
+			{{ end }}
 			{{ with .Params.author }}
 			<span>by {{ . }}</span>
 			{{ end }}
@@ -31,7 +32,7 @@
 	<footer>
 		{{ with .Params.tags }}
 		<section id="tags">
-			<h4>tagged with:</h4>
+			<h4>tags</h4>
 			<ul>
 				{{ range . }}
 				<li><a class="button basic" href='{{ "tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a></li>

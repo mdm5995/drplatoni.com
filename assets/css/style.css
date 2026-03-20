@@ -57,7 +57,7 @@ main>*:first-child>l,
 main>*:first-child>hr {
 	font-size: var(--s1);
 	font-family: var(--font-serif);
-	max-width: var(--line-length);
+	/* max-width: var(--line-length); */
 }
 
 main>*:first-child>p {
@@ -75,12 +75,12 @@ ul {
 }
 
 h1,
-h2 {
+h2,
+h3 {
 	font-family: var(--font-serif);
 	color: var(--color-accent);
 }
 
-h3,
 h4,
 h5,
 h6 {
@@ -97,10 +97,11 @@ h2 {
 	font-size: var(--s3);
 }
 
-/**/
-/* h3 { */
-/* 	font-size: var(--s1); */
-/* } */
+
+h3 {
+	font-size: var(--s2);
+}
+
 /**/
 /* h4 { */
 /* 	font-size: var(--s0); */
@@ -190,11 +191,11 @@ body>footer * {
 }
 
 a {
-	color: var(--color-secondary);
+	color: var(--color-accent);
 }
 
 a:hover {
-	color: var(--color-accent);
+	color: var(--color-secondary);
 }
 
 main {
@@ -283,6 +284,7 @@ aside>address>div {
 	border-radius: 4px;
 	text-decoration: none;
 	font-family: var(--font-sans-serif);
+	width: fit-content;
 }
 
 .button.basic {
@@ -332,11 +334,18 @@ section {
 li>article header>* {
 	font-weight: 500;
 	letter-spacing: var(--s-5);
+	font-size: var(--s1);
+	font-family: var(--font-sans-serif);
+	text-transform: uppercase;
+	color: var(--color-primary);
+}
+
+li>article a>header>* {
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
 }
 
-article header:hover>* {
+article a:hover>header>* {
 	text-decoration: none;
 }
 
@@ -428,7 +437,7 @@ li>article p {
 
 #news ul>li {
 	grid-column: 1 / -1;
-	/* NOTE: above means span from 1 to -1, i.e. first to last */
+	/* NOTE: first / last */
 }
 
 @media (min-width: 110ch) {
@@ -445,11 +454,9 @@ li>article p {
 }
 
 hr {
-	width: var(--line-length);
 	height: 1px;
 	color: var(--color-secondary);
 }
-
 
 main>article>header {
 	display: flex;
@@ -478,17 +485,44 @@ main>article #tags>ul {
 	display: flex;
 	flex-flow: row wrap;
 	gap: var(--s0);
+	font-size: var(--s0);
 }
 
 main>article>* {
+	/* max-width: var(--line-length); */
+}
 
-	max-width: var(--line-length);
-	font-size: var(--s1);
+main>article>figure {
+	/* margin: 0 auto; */
+	justify-self: stretch;
+	display: flex;
+	flex-direction: column;
+	gap: var(--s0);
+}
+
+/* NOTE: this captures the spans
+* inserted before/after the blockquote */
+main>article>figure>blockquote,
+main>article>figure>blockquote * {
+	color: var(--color-background);
+}
+
+main>article>figure>blockquote {
+	border-radius: var(--s-5);
+	border: var(--s-5) solid var(--color-accent);
+	background-color: var(--color-secondary);
+	padding: var(--s2);
+}
+
+main>article>figure>figcaption {
+	align-self: flex-end;
+	font-style: italic;
 }
 
 main>article>ul {
 	margin-inline-start: var(--s1);
 	list-style-type: disc;
+	font-size: var(--s1);
 }
 
 main>article>ul>li {
