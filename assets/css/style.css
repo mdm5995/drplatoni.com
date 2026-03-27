@@ -26,14 +26,10 @@
 	--color-background: #ffffff;
 
 	/* Typography */
-	--font-serif: 'adobe-garamond-pro', 'Georgia',
-		'Times New Roman',
+	--font-serif: "EB Garamond",
 		serif;
 
-	--font-sans-serif: 'Inter',
-		'Helvetica Neue',
-		Helvetica,
-		Arial,
+	--font-sans-serif: "Open Sans",
 		sans-serif;
 
 	--line-length: 65ch;
