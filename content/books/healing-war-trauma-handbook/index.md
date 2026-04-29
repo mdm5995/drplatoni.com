@@ -1,10 +1,11 @@
 ---
 title: "Healing War Trauma: A Handbook of Creative Approaches"
 subtitle: "Exciting approaches for healing war trauma"
-description: "An overview of publications and work by Dr. Kathy Platoni on war trauma and healing."
+author: "Raymond Monsour Scurfield and Katherine Theresa Platoni"
+draft: false
+summary: "For veterans who don’t respond to conventional, office-based treatments, this book offers innovative approaches designed to inspire clinicians and veterans alike."
+featured_image: "featured.webp"
 ---
-
-**Exciting approaches for healing war trauma**
 
 For veterans who don’t respond to conventional, office-based treatments, this book offers innovative approaches designed to inspire clinicians and veterans alike. Techniques are meant to complement traditional cognitive-behavioral protocols and help clinicians go beyond their limits.
 

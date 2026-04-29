@@ -1,7 +1,9 @@
 ---
 title: "War Trauma and Its Wake: Expanding the Circle of Healing"
 subtitle: "Treating trauma survivors"
-description: "An overview of publications and work by Dr. Kathy Platoni on war trauma and healing."
+featured_image: "featured.webp"
+draft: false
+summary: "This book is especially relevant for professionals working with veterans and active-duty military personnel."
 ---
 
 This book is especially relevant for professionals working with veterans and active-duty military personnel. The editors — one a Vietnam veteran and the other an Army Reserve psychologist with four deployments — have created a work that addresses both specific warrior communities and broader issues such as battlemind, guilt, suicide, and more. The depth of understanding from contributors makes *War Trauma and Its Wake* a crucial resource for understanding the military experience and essential for anyone committed to healing war trauma.
