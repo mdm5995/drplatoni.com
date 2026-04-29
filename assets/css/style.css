@@ -65,6 +65,10 @@ img {
 	object-fit: contain;
 }
 
+article>img {
+	object-fit: cover;
+}
+
 ul {
 	list-style-type: none;
 	font-family: var(--font-serif);
@@ -577,10 +581,10 @@ main>*:first-child>ul:only-of-type li article {
 nav.toc {
 	width: fit-content;
 	font-size: var(--s1);
-	background-color: var(--color-sub-accent);
-	border: 1px solid var(--color-accent);
-	border-radius: var(--s-5);
-	padding: var(--s-2) var(--s0);
+	/* background-color: var(--color-sub-accent); */
+	/* border: 1px solid var(--color-accent); */
+	/* border-radius: var(--s-5); */
+	/* padding: var(--s-2) var(--s0); */
 }
 
 nav.toc>label {
@@ -593,6 +597,12 @@ nav.toc details>ul {
 	margin-block-start: var(--s-2);
 }
 
+nav.toc details>summary {
+	border-inline-start: 1px solid var(--color-accent);
+	padding: var(--s-2) var(--s0);
+	cursor: pointer;
+}
+
 nav.toc details>summary::marker {
 	content: none;
 }
@@ -603,8 +613,16 @@ nav.toc details>summary::after {
 	color: var(--color-accent);
 }
 
+nav.toc details>summary:hover {
+	background-color: var(--color-background);
+}
+
 nav.toc details>summary:hover::after {
 	color: var(--color-secondary);
+}
+
+nav.toc details[open]>summary {
+	border-block-end: 1px solid var(--color-accent);
 }
 
 nav.toc details[open]>summary:after {
@@ -612,6 +630,7 @@ nav.toc details[open]>summary:after {
 }
 
 nav.toc details>ul {
-	padding-inline-start: var(--s-2);
+	padding-inline-start: var(--s1);
 	margin: 0;
+	margin-inline-start: var(--s1);
 }
