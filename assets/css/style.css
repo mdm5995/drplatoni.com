@@ -23,6 +23,7 @@
 	--color-primary: #1A1A1A;
 	--color-secondary: #7f827d;
 	--color-accent: #7f140a;
+	--color-sub-accent: #f6f6f6;
 	--color-background: #ffffff;
 
 	/* Typography */
@@ -53,7 +54,6 @@ main>*:first-child>l,
 main>*:first-child>hr {
 	font-size: var(--s1);
 	font-family: var(--font-serif);
-	/* max-width: var(--line-length); */
 }
 
 main>*:first-child>p {
@@ -62,7 +62,7 @@ main>*:first-child>p {
 
 img {
 	max-width: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 ul {
@@ -107,7 +107,7 @@ h3 {
 header+img {
 	display: block;
 	width: 100%;
-	height: max(30vh, 250px);
+	height: max(30vh, 400px);
 	object-fit: cover;
 	object-position: 100% 40%;
 	filter: brightness(0.7);
@@ -117,8 +117,7 @@ body>header {
 	background-color: var(--color-secondary);
 }
 
-section:has(>article),
-article>section {
+section:has(>article) {
 	max-width: var(--line-length);
 }
 
@@ -258,6 +257,11 @@ main>*:first-child {
 	display: flex;
 	flex-direction: column;
 	gap: var(--s2);
+	max-width: var(--line-length);
+}
+
+main>section:first-child:has(>section) {
+	max-width: 100%;
 }
 
 aside>address {
@@ -394,11 +398,31 @@ div>ul img {
 	}
 }
 
-li>article {
-	flex-direction: column;
-	justify-content: flex-start;
+ul.columns {
 	display: flex;
 	gap: var(--s0);
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+
+ul.columns>li>ul {
+	list-style-type: initial;
+	margin-inline-start: var(--s1);
+}
+
+ul.columns>li {
+	flex-basis: 100%;
+}
+
+li>article {
+	flex-direction: column;
+	display: flex;
+	gap: var(--s0);
+}
+
+li>article>img {
+	aspect-ratio: 8/5;
 }
 
 li>article a:hover>* {
@@ -548,4 +572,46 @@ main>*:first-child>ul:only-of-type li article {
 	width: 100%;
 	height: 100%;
 	border: 0;
+}
+
+nav.toc {
+	width: fit-content;
+	font-size: var(--s1);
+	background-color: var(--color-sub-accent);
+	border: 1px solid var(--color-accent);
+	border-radius: var(--s-5);
+	padding: var(--s-2) var(--s0);
+}
+
+nav.toc>label {
+	font-family: var(--font-serif);
+}
+
+nav.toc details>ul {
+	margin-inline-start: var(--s1);
+	border-left: 1px solid var(--color-accent);
+	margin-block-start: var(--s-2);
+}
+
+nav.toc details>summary::marker {
+	content: none;
+}
+
+nav.toc details>summary::after {
+	content: "►";
+	font-size: var(--s-1);
+	color: var(--color-accent);
+}
+
+nav.toc details>summary:hover::after {
+	color: var(--color-secondary);
+}
+
+nav.toc details[open]>summary:after {
+	content: "▼";
+}
+
+nav.toc details>ul {
+	padding-inline-start: var(--s-2);
+	margin: 0;
 }

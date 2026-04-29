@@ -1,0 +1,9 @@
+<div class="grid-3-1">
+	{{ $images := split (.Get "images") "," }}
+	{{ range $images }}
+	{{ $img := resources.Get (printf "images/%s" .) }}
+	{{ if $img }}
+	<img src="{{ $img.RelPermalink }}" alt="">
+	{{ end }}
+	{{ end }}
+</div>

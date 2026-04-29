@@ -1,6 +1,13 @@
 {{ $defaultBanner := resources.Get "images/homepage-banner.png" }}
 {{ $featuredImageParam := .Params.featured_image }}
-{{ $featuredImage := .Resources.Get $featuredImageParam }}
+{{ $featuredImageFile := .Resources.GetMatch "featured.*" }}
+
+{{ $featuredImage := "" }}
+{{ if $featuredImageParam }}
+{{ $featuredImage = .Resources.Get $featuredImageParam }}
+{{ else }}
+{{ $featuredImage = $featuredImageFile }}
+{{ end }}
 
 {{ $banner := "" }}
 {{ if not $featuredImage }}
@@ -8,6 +15,7 @@
 {{ else }}
 {{ $banner = $featuredImage }}
 {{ end }}
+
 <img src="{{ $banner.Permalink }}"
      alt='{{ $.Params.featured_image_alt | default "Dr. Platoni in fatigues among fellow soldiers" }}'
 >

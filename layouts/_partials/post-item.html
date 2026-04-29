@@ -2,17 +2,25 @@
 Usage: {{ partial "post-card.html" . }}
 */}}
 
-{{/* get or default for thumbnail */}}
 {{ $image := resources.Get "images/default-thumbnail.jpg" }}
 {{ with index .Params "featured_image" }}
-{{ with resources.Get . }}
+{{ $found := $.Resources.Get . }}
+{{ if not $found }}
+{{ $found = resources.Get . }}
+{{ end }}
+{{ with $found }}
 {{ $image = . }}
 {{ end }}
 {{ end }}
 
 <article>
 	{{ with $image }}
-	{{ $thumbnail := .Resize "400x webp q80" }}
+	{{ $thumbnail := "" }}
+	{{ if not (eq .MediaType.SubType "svg") }}
+	{{ $thumbnail = .Resize "450x webp q80" }}
+	{{ else }}
+	{{ $thumbnail = $image }}
+	{{ end }}
 	<img src="{{ $thumbnail.RelPermalink }}" alt="{{ $.Title }}" loading="lazy">
 	{{ end }}
 

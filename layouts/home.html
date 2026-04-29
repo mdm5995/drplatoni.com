@@ -48,14 +48,6 @@
 				{{ partial "post-item.html" . }}
 			</li>
 			{{ end }}
-			{{/* TODO: REMOVE DUPES */}}
-			{{ range where site.RegularPages "Section" "in" (slice "news" "events" "books") }}
-			{{ $page := . }}
-			{{ $dupeTitle := printf "[DUPE] %s" .Title }}
-			<li>
-				{{ partial "post-item.html" (dict "Title" $dupeTitle "RelPermalink" $page.RelPermalink "Summary" $page.Summary "Params" $page.Params) }}
-			</li>
-			{{ end }}
 		</ul>
 	</section>
 </section>

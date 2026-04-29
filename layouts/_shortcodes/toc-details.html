@@ -1,0 +1,31 @@
+<nav class="toc">
+
+	{{- $headings := .Page.Fragments.Headings -}}
+	
+	{{- /* recursive render function */ -}}
+	{{- define "renderHeadings" -}}
+	{{- $items := . -}}
+
+	<ul>
+		{{- range $items }}
+		<li>
+
+			{{- if gt (len .Headings) 0 }}
+			<details>
+				<summary>
+					<a href="#{{ .ID }}">{{ .Title }}</a>
+				</summary>
+
+				{{- template "renderHeadings" .Headings }}
+			</details>
+			{{- else }}
+			<a href="#{{ .ID }}">{{ .Title }}</a>
+			{{- end }}
+		</li>
+		{{- end }}
+	</ul>
+
+	{{- end }}
+	
+	{{- template "renderHeadings" $headings }}
+</nav>

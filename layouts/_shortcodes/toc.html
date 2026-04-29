@@ -1,0 +1,37 @@
+<nav class="toc">
+	<label>Table of Contents</label>
+
+	{{- $headings := .Page.Fragments.Headings -}}
+	
+	{{- /* recursive render function */ -}}
+	{{- define "renderHeadings" -}}
+	{{- $items := . -}}
+	
+	{{- range $items }}
+	{{- if (gt (len .Headings) 0) }}
+	{{- if .Title }}
+	<details>
+		<summary>
+			<a href="#{{ .ID }}">{{ .Title }}</a>
+		</summary>
+
+		<ul>
+			{{- template "renderHeadings" .Headings }}
+		</ul>
+	</details>
+	{{- else }}
+	<ul>
+		{{- template "renderHeadings" .Headings }}
+	</ul>
+	{{- end}}
+	{{- else}}
+	<li>
+		<a href="#{{ .ID }}">{{ .Title | markdownify }}</a>
+	</li>
+	{{- end }}
+	{{- end }}
+	
+	{{- end }}
+	
+	{{- template "renderHeadings" $headings }}
+</nav>

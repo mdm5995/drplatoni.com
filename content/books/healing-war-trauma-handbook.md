@@ -17,3 +17,8 @@ For veterans who don’t respond to conventional, office-based treatments, this 
     text="Think of *Healing War Trauma* as a counterinsurgency field manual to battle the invisible and incapacitating wounds sustained by hundreds of thousands during a decade of war... the editors offer an exciting array of creative and complementary treatments — and hope — in this handbook."
     author="Ann Gerhart, Senior Writer, Washington Post"
  >}}
+
+{{< button
+  label="BUY THE BOOK"
+  href="http://www.amazon.com/Healing-War-Trauma-Approaches-Psychosocial-ebook/dp/B00BEGBYCC/ref=sr_1_1?ie=UTF8&qid=1393303476&sr=8-1&keywords=healing+war+trauma+a+handbook+of+creative+approaches"
+>}}
