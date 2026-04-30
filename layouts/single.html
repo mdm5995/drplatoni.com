@@ -6,6 +6,81 @@
 <article id="post">
 	<header>
 		<h2>{{ .Title }}</h2>
+
+		{{ with .Params.subtitle }}
+		<h4>{{ . }}</h4>
+		{{ end }}
+
+		<!-- Post metadata -->
+		<div>
+			{{ with .Params.date }}
+			{{ $d := time . }}
+			<time datetime='{{ $d.Format "2006-01-02" }}'>
+				{{ $d.Format "January 2, 2006" }}
+			</time>
+			{{ end }}
+			
+			{{ with .Params.author }}
+			<span>by {{ . }}</span>
+			{{ end }}
+		</div>
+
+		<!-- Event information block -->
+		{{ if or .Params.event_date .Params.time .Params.location .Params.address }}
+		<section id="event-info">
+			<h3>Event Information</h3>
+			<hr>
+
+			<ul>
+				{{ with .Params.event_date }}
+				{{ $d := time . }}
+				<li>
+					<strong>Date:</strong>
+					<time datetime='{{ $d.Format "2006-01-02" }}'>
+						{{ $d.Format "January 2, 2006" }}
+					</time>
+				</li>
+				{{ end }}
+				
+				{{ with .Params.time }}
+				<li>
+					<strong>Time:</strong>
+					<span>{{ . | markdownify }}</span>
+				</li>
+				{{ end }}
+				
+				{{ with .Params.location }}
+				<li>
+					<strong>Location:</strong>
+					<span>{{ . }}</span>
+				</li>
+				{{ end }}
+				
+				{{ with .Params.address }}
+				<li>
+					<strong>Address:</strong>
+					<address>
+						{{ range $i, $part := split . "|" }}
+						{{- if $i }}<br>{{ end -}}
+						{{ trim $part " " }}
+						{{- end }}
+					</address>
+				</li>
+				{{ end }}
+			</ul>
+		</section>
+		{{ end }}
+		
+		{{ with .Params.source_name }}
+		<cite>
+			<a href="{{ $.Params.source_url }}" target="_blank" rel="noopener noreferrer">
+				{{ . }}
+			</a>
+		</cite>
+		{{ end }}
+	</header>
+	<header>
+		<h2>{{ .Title }}</h2>
 		{{ with .Params.subtitle }}
 		<h4>{{ . }}</h4>
 		{{ end }}
@@ -19,6 +94,32 @@
 			<span>by {{ . }}</span>
 			{{ end }}
 		</div>
+		{{ if or .Params.event_date .Params.location .Params.address .Params.time }}
+		<div>
+			{{ with .Params.event_date }}
+			{{ $d := time . }}
+			<time datetime='{{ $d.Format "2006-01-02" }}'>
+				{{ $d.Format "January 2, 2006" }}
+			</time>
+			{{ end }}
+		</div>
+		<div>
+			{{ with .Params.time }}
+			{{- . | markdownify -}}
+			{{ end }}
+			{{ with .Params.address }}
+		</div>
+		<div>
+			<strong>Location:</strong>
+			<address>
+				{{ range $i, $part := split . "|" }}
+				{{- if $i }}<br>{{ end -}}
+				{{ trim $part " " }}
+				{{- end }}
+			</address>
+			{{ end }}
+		</div>
+		{{ end }}
 		{{ with .Params.source_name }}
 		<cite>
 			<a href="{{ $.Params.source_url }}" target="_blank" rel="noopener noreferrer">{{ . }}</a>

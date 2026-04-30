@@ -2,15 +2,19 @@
 Usage: {{ partial "post-card.html" . }}
 */}}
 
+{{ $featuredImageParam := .Params.featured_image }}
+{{ $featuredImageFile := .Resources.GetMatch "featured.*" }}
+
+{{ $featuredImage := "" }}
+{{ if $featuredImageParam }}
+{{ $featuredImage = .Resources.Get $featuredImageParam }}
+{{ else }}
+{{ $featuredImage = $featuredImageFile }}
+{{ end }}
+
 {{ $image := resources.Get "images/default-thumbnail.jpg" }}
-{{ with index .Params "featured_image" }}
-{{ $found := $.Resources.Get . }}
-{{ if not $found }}
-{{ $found = resources.Get . }}
-{{ end }}
-{{ with $found }}
-{{ $image = . }}
-{{ end }}
+{{ if $featuredImage }}
+{{ $image = $featuredImage }}
 {{ end }}
 
 <article>

@@ -8,7 +8,7 @@ featured_image: ""
 categories: ["news"]
 tags: ["fort hood", "nidal hasan", "military", "execution", "terrorism", "workplace violence", "survivors"]
 source_name: "KXXV NEWS — September 26, 2025"
-source_url: "https://www.drplatoni.com/s/kxxv-news-dr-platoni-fort-hood-shooter-nidal-hasan-could-face-execution-after-16-years-survivors-wan.pdf"
+source_url: "/files/kxxv-news-dr-platoni-fort-hood-shooter-nidal-hasan-could-face-execution-after-16-years.pdf"
 ---
 
 The man convicted of killing 13 soldiers and injuring more than 30 at Fort Hood in 2009, Nidal Hasan, could soon be executed after his final legal challenge was rejected in April 2025. Survivor Julia Wilson, who was nine months pregnant during the shooting, says she's "100%" hoping they execute Hasan and supports bringing him back to Texas for the execution.
