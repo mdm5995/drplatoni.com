@@ -79,53 +79,6 @@
 		</cite>
 		{{ end }}
 	</header>
-	<header>
-		<h2>{{ .Title }}</h2>
-		{{ with .Params.subtitle }}
-		<h4>{{ . }}</h4>
-		{{ end }}
-		<div>
-			{{ with .Params.date }}
-			<time datetime='{{ .Format "2006-01-02" }}'>
-				{{ .Format "January 2, 2006" }}
-			</time>
-			{{ end }}
-			{{ with .Params.author }}
-			<span>by {{ . }}</span>
-			{{ end }}
-		</div>
-		{{ if or .Params.event_date .Params.location .Params.address .Params.time }}
-		<div>
-			{{ with .Params.event_date }}
-			{{ $d := time . }}
-			<time datetime='{{ $d.Format "2006-01-02" }}'>
-				{{ $d.Format "January 2, 2006" }}
-			</time>
-			{{ end }}
-		</div>
-		<div>
-			{{ with .Params.time }}
-			{{- . | markdownify -}}
-			{{ end }}
-			{{ with .Params.address }}
-		</div>
-		<div>
-			<strong>Location:</strong>
-			<address>
-				{{ range $i, $part := split . "|" }}
-				{{- if $i }}<br>{{ end -}}
-				{{ trim $part " " }}
-				{{- end }}
-			</address>
-			{{ end }}
-		</div>
-		{{ end }}
-		{{ with .Params.source_name }}
-		<cite>
-			<a href="{{ $.Params.source_url }}" target="_blank" rel="noopener noreferrer">{{ . }}</a>
-		</cite>
-		{{ end }}
-	</header>
 	{{ .Content }}
 	{{ with .Params.source_name }}
 	<a class="button primary" href="{{ $.Params.source_url }}" target="_blank" rel="noopener noreferrer">Read Full Article</a>

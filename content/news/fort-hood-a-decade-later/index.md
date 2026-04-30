@@ -5,7 +5,6 @@ date: "2018-07-01"
 author: "Bill Perry"
 draft: false
 summary: "Nearly nine years after the Fort Hood Massacre, survivors and families of the 14 killed continue to fight for proper benefits and recognition. Dr. Kathy Platoni, a survivor and clinical psychologist, advocates for reclassifying the 2009 shooting as a terrorist act to unlock long-overdue military entitlements."
-featured_image: "featured.jpg"
 categories: ["blog", "press"]
 tags: ["fort hood", "nidal hasan", "military", "terrorism", "workplace violence", "survivors", "ptsd", "veterans benefits", "purple heart"]
 ---

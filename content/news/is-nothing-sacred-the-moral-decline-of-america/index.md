@@ -4,7 +4,6 @@ subtitle: "Survivors and families still denied benefits as shooting remains clas
 date: "2017-10-23"
 author: "COL (Dr.) Kathy Platoni"
 draft: false
-featured_image: "featured.jpg"
 categories: ["blog", "press"]
 tags: ["patriotism", "veterans", "national anthem", "nfl protests", "military", "american culture", "division", "social commentary"]
 summary: "We have found the enemy and it is us. We are consumed with hatred for anything and everything that dares to offend our fragile egos, simply because there cannot be any viewpoint or belief systems other than ours. Depending on who or what one votes for or against, the Bombay doors are thrust open for far more than mean-spirited attacks. We are at war with one another."

@@ -5,7 +5,6 @@ date: "2018-02-09"
 author: "COL (Dr.) Kathy Platoni"
 draft: false
 summary: "On the 8th anniversary of the Fort Hood Massacre, survivor Dr. Kathy Platoni condemns the continued classification of the attack as workplace violence, the denial of benefits to the wounded, and the seven suicides among survivors — calling the government's inaction nothing less than treason."
-featured_image: "featured.jpg"
 categories: ["blog"]
 tags: ["fort hood", "nidal hasan", "military", "terrorism", "workplace violence", "survivors", "veterans benefits", "purple heart", "suicide", "ptsd"]
 ---

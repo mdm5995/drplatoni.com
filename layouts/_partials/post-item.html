@@ -7,7 +7,7 @@ Usage: {{ partial "post-card.html" . }}
 
 {{ $featuredImage := "" }}
 {{ if $featuredImageParam }}
-{{ $featuredImage = .Resources.Get $featuredImageParam }}
+{{ $featuredImage = resources.Get $featuredImageParam }}
 {{ else }}
 {{ $featuredImage = $featuredImageFile }}
 {{ end }}

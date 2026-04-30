@@ -5,7 +5,6 @@ date: "2018-05-25"
 author: "Stephanie Russell-Kraft"
 draft: false
 summary: "Women veterans face a double burden: the trauma of combat and sexual assault, compounded by a VA system designed for men that routinely dismisses their experiences. From suppressed brain injuries to unreported rapes, servicewomen describe decades of 'fake resilience' and barriers to mental health care."
-featured_image: "featured.PNG"
 categories: ["blog"]
 tags: ["ptsd", "women veterans", "military", "sexual assault", "va healthcare", "mental health", "combat", "purple heart", "military sexual trauma"]
 ---
