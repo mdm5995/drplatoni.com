@@ -1,9 +1,9 @@
 ---
 title: "Responding Effectively to Veterans in Crisis"
-date: "2026-01-01"
+date: "2024-01-01"
 event_date: "2017-03-30"
 draft: false
-summary: "On March 30, clinical psychologist and retired Army Colonel Dr. Kathy Platoni, will provide 2 seminars for first responders..."
+summary: "On March 30, clinical psychologist and retired Army Colonel Dr. Kathy Platoni, will provide 2 seminars for first responders."
 categories: ["events"]
 tags: ["veterans", "PTSD", "crisis", "mental health", "military", "first responders", "de-escalation"]
 address: "Samaritan on Main | 663 East Main St | Ashland, OH 44805"

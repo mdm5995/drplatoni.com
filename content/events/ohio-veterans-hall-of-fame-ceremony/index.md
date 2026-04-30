@@ -1,6 +1,6 @@
 ---
 title: "Ohio Veterans Hall of Fame Class of 2019 Induction Ceremony"
-date: "2026-01-01"
+date: "2024-01-01"
 event_date: "2019-11-07"
 draft: false
 summary: "The Ohio Department of Veterans Services has announced the 28th annual class of the Ohio Veterans Hall of Fame, featuring 20 outstanding inductees honored for their post-military achievements."

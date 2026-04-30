@@ -1,16 +1,17 @@
 ---
 title: "The Ohio EMS Conference"
-date: "2026-01-01"
-event_date: "2018-05-22"
-draft: false
 summary: "Presented by OhioHealth, this premier conference brings together EMS professionals for high-level clinical education, featuring keynote speaker Dr. Marianne Gausche-Hill and prestigious annual award ceremonies."
+date: "2024-01-01"
+event_date: "2018-05-22"
+time: "**In-Person (May 19):** 08:00–16:15 | **Online (May 19):** 08:45–16:30"
+draft: false
 categories: ["events"]
 tags: ["EMS", "emergency medicine", "OhioHealth", "continuing education", "paramedic", "trauma"]
 address: "Hilton Columbus/Polaris | 8700 Lyra Dr | Columbus, Ohio 43240"
 ---
 
 ## Conference Overview
-The **Ohio EMS Conference**, presented by OhioHealth, is a comprehensive educational event designed for emergency medical responders, EMTs, paramedics, nurses, and physicians. The 2026 conference features a hybrid format with an in-person day at the Hilton Columbus/Polaris followed by a live online session via Microsoft Teams.
+The **Ohio EMS Conference**, presented by OhioHealth, is a comprehensive educational event designed for emergency medical responders, EMTs, paramedics, nurses, and physicians. The 2024 conference features a hybrid format with an in-person day at the Hilton Columbus/Polaris followed by a live online session via Microsoft Teams.
 
 ---
 

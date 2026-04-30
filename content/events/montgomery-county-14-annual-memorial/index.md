@@ -1,6 +1,6 @@
 ---
 title: "14th Annual Montgomery County Law Enforcement Officer Memorial Ceremony"
-date: "2026-01-01"
+date: "2024-01-01"
 event_date: "2021-09-27"
 draft: false
 summary: "Join law enforcement and the community on September 27 to honor the 40 Montgomery County law enforcement officers who have died in the line of duty over the past 131 years."

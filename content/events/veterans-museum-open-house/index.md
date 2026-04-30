@@ -1,6 +1,6 @@
 ---
 title: "Veterans Memorial Museum 10-Year Anniversary Open House"
-date: "2026-01-01"
+date: "2024-01-01"
 event_date: "2019-05-18"
 draft: false
 summary: "The Veteran Memorial Museum in Germantown celebrates its 10th anniversary with an Open House fundraiser featuring guest speakers, documentary screenings, and a special appearance by the USA Patriots."
