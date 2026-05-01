@@ -498,6 +498,14 @@ main>article {
 	gap: var(--s0);
 }
 
+main>article>blockquote {
+	padding-inline: var(--s3);
+	border-inline-start: var(--s-5) solid var(--color-accent);
+	margin-inline: var(--s1);
+	padding: var(--s0);
+	background-color: var(--color-sub-accent);
+}
+
 main>article #tags {
 	display: flex;
 	flex-flow: column;
